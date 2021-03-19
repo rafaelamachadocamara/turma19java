@@ -3,21 +3,22 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro idadeDias
-		inteiro anos
-		inteiro meses
-		inteiro dias
+		inteiro soma = 0
 
-		escreva("Digite a idade em dias totais") 
-		leia(idadeDias)
+		escreva("Os numeros multiplos de 3 da contagem de 1 a 500: ")
 
-		anos = (idadeDias / 365)
-		meses = (idadeDias % 365) / 30
-		dias = (idadeDias %365) % 30
+		para (inteiro x =1;x<=15;x++)
+		{
+			se (x%3==0){
+				se (x%2 != 0){
+					soma = soma + x
 
-		escreva("Anos: ",anos)
-		escreva("\nMeses: ", meses)
-		escreva("\nDias: ", dias)
+					escreva(x,",")
+				}
+			}
+			escreva("Soma dos numeros números multiplos de 3 ", soma)
+			
+		}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -25,7 +26,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 337; 
+ * @POSICAO-CURSOR = 9; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

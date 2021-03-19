@@ -3,21 +3,28 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro idadeDias
-		inteiro anos
-		inteiro meses
-		inteiro dias
+		inteiro numero
 
-		escreva("Digite a idade em dias totais") 
-		leia(idadeDias)
+		escreva("Digite o numero desejado: ")
+		leia(numero)
 
-		anos = (idadeDias / 365)
-		meses = (idadeDias % 365) / 30
-		dias = (idadeDias %365) % 30
+		se(numero == 0) {
+			escreva("O numero é neutro")
 
-		escreva("Anos: ",anos)
-		escreva("\nMeses: ", meses)
-		escreva("\nDias: ", dias)
+		}
+
+		senao se (numero < 0){
+			escreva("Numero negativo,impossivel calcular")
+			
+		}
+		senao se ((numero % 2) == 0){
+			escreva("Seu numero é par")
+
+	}
+
+			senao {
+				escreva ("O numero é impar") 
+		}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -25,7 +32,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 337; 
+ * @POSICAO-CURSOR = 248; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

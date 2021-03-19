@@ -1,23 +1,23 @@
+
 programa
 {
 	
 	funcao inicio()
 	{
-		inteiro idadeDias
-		inteiro anos
-		inteiro meses
-		inteiro dias
+		inteiro i = 1
 
-		escreva("Digite a idade em dias totais") 
-		leia(idadeDias)
+		enquanto(i <=100){
+			escreva(i +", ")
+			i++
+			
+		}
 
-		anos = (idadeDias / 365)
-		meses = (idadeDias % 365) / 30
-		dias = (idadeDias %365) % 30
-
-		escreva("Anos: ",anos)
-		escreva("\nMeses: ", meses)
-		escreva("\nDias: ", dias)
+		escreva("\nFim do laço enquanto\n")
+		para(inteiro j = 100; j>=0 ; j --){
+			escreva(j+" , ")
+			
+		}
+		escreva("\n Fim do laço")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -25,7 +25,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 337; 
+ * @POSICAO-CURSOR = 153; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

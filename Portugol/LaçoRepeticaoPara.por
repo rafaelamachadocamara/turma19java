@@ -3,21 +3,22 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro idadeDias
-		inteiro anos
-		inteiro meses
-		inteiro dias
+		inteiro valor
+		inteiro valorUsuario
+		inteiro resultado
 
-		escreva("Digite a idade em dias totais") 
-		leia(idadeDias)
+		escreva("Entre com o valor da tabuada: ")
+		leia(valorUsuario)
+		limpa()
 
-		anos = (idadeDias / 365)
-		meses = (idadeDias % 365) / 30
-		dias = (idadeDias %365) % 30
+		para(valor = 1;valor <=10;valor ++)
+		{
+			resultado = valor * valorUsuario
 
-		escreva("Anos: ",anos)
-		escreva("\nMeses: ", meses)
-		escreva("\nDias: ", dias)
+			escreva("\n",valor," X ",valorUsuario,"=", resultado)
+			
+			
+		}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -25,7 +26,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 337; 
+ * @POSICAO-CURSOR = 172; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

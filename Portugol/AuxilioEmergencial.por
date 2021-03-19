@@ -1,33 +1,38 @@
 programa
 {
-	inclua biblioteca Matematica
 	
 	funcao inicio()
 	{
-
 		cadeia nome
-		real grauF
-		real temperaturaHoje
-		
-		escreva("Qual o seu nome: ")
-		leia (nome)
-		escreva("Insira a temperatura em Fahrenheit aqui: ")
-		leia(grauF)
+		inteiro valor 
 
-		temperaturaHoje = (grauF-32)/1.8
+		escreva("Qual o seu nome?: ")
+		leia(nome)
+		escreva("Se você é chefe de familia digite 1, se não digite 2:  ")
+		leia(valor)
 
-		escreva("Olá, ", nome, " a temperatura de hoje é: ", Matematica.arredondar(temperaturaHoje, 00), " C ")
+		se(valor == 1){
+			escreva("Auxilio de 1200 disponivel ")
+		}
+			senao se (valor == 2){
+				escreva("Auxilio de 600 disponivel")
+			}
+			senao {
+				escreva("Digitou incorretamente, auxilio bloqueado")
+			}
+			
+		}
 
 		
 		
-	}
+	
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 377; 
+ * @POSICAO-CURSOR = 400; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
