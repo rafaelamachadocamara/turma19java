@@ -8,14 +8,14 @@ programa
 	inteiro diaAniversario = 10 , auxDia
 	cadeia cpf = " "
 	inteiro numero = 0
-	real saldo = 0
-	real valorMovimento = 0
+	real valorMovimento = 0.00
 	logico ativo = verdadeiro //ativa ou inativa
 	funcao inicio()
 	{
 		//variaveis
 		caracter opcao
 		cadeia tipo
+		
 
 		//entrada
 		faca
@@ -36,6 +36,7 @@ programa
 				tipo = "POUPANÇA"
 				
 				caracter auxCreDeb
+				real saldo = 0.00
 				cabecalho(tipo)
 				escreva("Qual o dia hoje? ")
 				leia(auxDia)
@@ -116,11 +117,102 @@ programa
 				cabecalho(tipo)
 				Util.aguarde(2000)
 			}
+			
 			senao se (opcao =='3'){
 				tipo = "ESPECIAL"
 				cabecalho(tipo)
 				Util.aguarde(2000)
+				
+				//Rafaela
+				
+				tipo = "ESPECIAL"
+				caracter auxCreDeb
+				caracter auxSair
+				real saldo = 0.00
+				real limiteEspecial = 1000.00
+				
+				
+					linha()
+					escreva("Número da conta ",numero )
+					escreva("\nCPF", cpf)
+					escreva("\nStatus da Conta: " , ativo)
+					escreva("\nSaldo em Conta: R$",saldo)
+					linha()
+					
+				Util.aguarde(2000)
+				para (inteiro x=1; x<=10; x++){
+					escreva("\nMovimento :", x, "\n")
+					escreva("\nSaldo atual: ", saldo)
+					escreva("\nSaldo Especial Disponivel: R$", limiteEspecial)
+					
+					
+					faca {
+						
+						escreva("\nDigite 1 - Para Crédito, 2 - Para Débito, 3 - SAIR ")
+						leia(auxCreDeb)
+						se (auxCreDeb != '1' e auxCreDeb != '2' e auxCreDeb!= '3'){
+
+							escreva("Opçao invalida tente de novo ")
+							Util.aguarde(2000)
+							limpa()
+						}
+						 
+						
+					}enquanto (auxCreDeb != '1' e auxCreDeb != '2' e auxCreDeb!= '3')
+					
+						
+						
+					se (auxCreDeb == '1'){
+						escreva("\nValor do movimento?\nR$")
+						leia(valorMovimento)
+						saldo = saldo + valorMovimento
+					}senao se(auxCreDeb == '2')
+					
+					{
+							escreva("\nValor do movimento?\nR$")
+						leia(valorMovimento)
+						
+					
+					
+					senao se (saldo < valorMovimento e valorMovimento < limiteEspecial){
+							limiteEspecial = limiteEspecial - valorMovimento
+							escreva("Você realizou um saque do seu Limite Especial, seu novo limite é de: ",limiteEspecial, "\n")
+
+							senao se(saldo < valorMovimento e valorMovimento > limiteEspecial){
+								escreva("Você não tem limite e saldo suficientes para esta operação.\n")
+							}
+								
+								
+							
+
+							
+								
+									
+								
+							}
+
+							
+							
+						}
+
+							
+						
+							}senao se (auxCreDeb == '3'){
+						    	x = 11
+							limpa()
+							linha()
+							escreva ("\nSEU SALDO É DE R$",saldo)
+							escreva ("\nO BANCO BANKER AGRADEÇE SUA PREFERENCIA")
+							escreva( "\nSORRIA SEU DINHEIRO É NOSSA ALEGRIA" )
+							linha()
+							Util.aguarde(7000)
+					}
+				
+					
+				}
+			
 			}
+			
 			senao se (opcao =='4'){
 				tipo = "EMPRESA"
 				cabecalho(tipo)
@@ -181,7 +273,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 50; 
+ * @POSICAO-CURSOR = 3952; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
