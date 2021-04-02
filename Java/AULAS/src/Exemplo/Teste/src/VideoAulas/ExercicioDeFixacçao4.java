@@ -30,7 +30,7 @@ public class ExercicioDeFixacçao4 {
 		
 		System.out.println("Seu nome é: " + nome);
 		System.out.println("Seu numero de horas trabalhadas é de:  = " + numero);
-		System.out.printf("E o total do seu salário é de  = U$ %.2f%n", calculoSalario);
+		System.out.printf("E o total do seu salário é de  = U$ %.2f\n", calculoSalario);
 		
 		sc.close();
 	}
