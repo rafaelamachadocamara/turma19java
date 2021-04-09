@@ -3,6 +3,9 @@ package teste;
 public class Funcionario {
 	private double salario;
 	private String nome;
+	public Funcionario(String nome, int matricula, String profissao) {
+		// TODO Auto-generated constructor stub
+	}
 	public double getSalario() {
 		return salario;
 	}
@@ -14,6 +17,10 @@ public class Funcionario {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	public char[] getDepartamento() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

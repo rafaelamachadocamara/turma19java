@@ -1,6 +1,6 @@
 package entities;
 
-public class Estudantes {
+public abstract class Estudantes {
 
 	// atributos
 	private int matricula;

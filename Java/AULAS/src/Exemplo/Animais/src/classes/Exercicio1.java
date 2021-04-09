@@ -6,7 +6,7 @@ public class Exercicio1 {
 		
 		Cachorro animal1 = new Cachorro("MAX", 9, "AU AU AU", "ZUMMM");
 		Cavalo1 animal2 = new Cavalo1("ALIPIO", 11, "IRRRIINN","POCOTÓ, POCOTÓ");
-		Preguiça1 animal3 = new Preguiça1("FOFO", 3, "ZzZzz", "CRECK CRECK");
+		Preguiça1 animal3 = new Preguiça1("FOFA", 3, "ZzZzz", "CRECK CRECK");
 
 		
 		System.out.println("O cachorro " +animal1.nome+ " tem " +animal1.idade+" anos de idade,"+" corre assim: "+ animal1.getEmitirSom() +" e faz o barulho: "+animal1.getCorrer());
