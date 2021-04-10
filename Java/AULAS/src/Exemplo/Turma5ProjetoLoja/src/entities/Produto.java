@@ -42,10 +42,25 @@ public abstract class Produto {
 	public int getQtdeEstoque() {
 		return qtdeEstoque;
 	}
-
+	
 	public void setQtdeEstoque(int qtdeEstoque) {
 		this.qtdeEstoque = qtdeEstoque;
 	}
 	
+	//metodos
+	public void IncluirEstoque(int valorSerIncluido) {
+		this.qtdeEstoque = qtdeEstoque + valorSerIncluido;
+	}
+	public void tirarEstoque(int valorComprado) {
+		if(this.qtdeEstoque >= valorComprado) {
+			this.qtdeEstoque = qtdeEstoque - valorComprado;
+		}
+		
+		else {
+			System.out.println("No momento não possuimos estoque para este produto.");
+		}
+
+		
 	
+}
 }
