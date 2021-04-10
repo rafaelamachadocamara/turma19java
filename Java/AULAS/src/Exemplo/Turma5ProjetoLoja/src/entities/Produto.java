@@ -1,7 +1,7 @@
-package classes;
+package entities;
 
 public abstract class Produto {
-	
+
 	private String descricao;
 	private String codigo;
 	private double valorUnitario;
@@ -46,5 +46,6 @@ public abstract class Produto {
 	public void setQtdeEstoque(int qtdeEstoque) {
 		this.qtdeEstoque = qtdeEstoque;
 	}
+	
 	
 }

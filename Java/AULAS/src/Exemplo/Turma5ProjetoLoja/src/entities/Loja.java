@@ -1,7 +1,7 @@
-package classes;
+package entities;
 
 public class Loja extends Produto {
-	
+
 	private String nome;
 	private String cnpj;
 	

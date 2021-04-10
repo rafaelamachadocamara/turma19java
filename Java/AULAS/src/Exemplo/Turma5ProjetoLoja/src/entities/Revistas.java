@@ -1,7 +1,7 @@
-package classes;
+package entities;
 
 public class Revistas extends Produto {
-	
+
 	private int quadrinhos;
 	private int mangás;
 	private int gameShark;
@@ -37,6 +37,5 @@ public class Revistas extends Produto {
 	public void setGameShark(int gameShark) {
 		this.gameShark = gameShark;
 	}
-	
 	
 }
