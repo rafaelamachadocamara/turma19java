@@ -28,5 +28,4 @@ public class Loja extends Produto {
 	}
 	
 	
-	
 }
