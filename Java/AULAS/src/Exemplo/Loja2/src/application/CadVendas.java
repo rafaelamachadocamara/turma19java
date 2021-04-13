@@ -43,7 +43,6 @@ public class CadVendas {
 		carrinho.add(new Casaco("CASACO", "CD-369", 120.99, 0, " Genner"));
 		carrinho.add(new Tenis("TENIS", "CD-954", 200.99, 0, " Genner"));
 
-
 		do {
 			linha();
 			System.out.println("\t\t---- LOJA GENNER ----");
@@ -52,31 +51,25 @@ public class CadVendas {
 			System.out.println("DESCRIÇÃO\tCODIGO\t\t\tVALOR\t\t\tESTOQUE");
 			System.out.println();
 			for (Produto tela : carrinho) {
-				System.out.println(tela.getDescricao() + "\t\t" + tela.getCodigo() + "\t\t\t" + "R$ " + tela.getValorunitario()+ 
-						 "\t\t" + tela.getQtdeEstoque());
+				System.out.println(tela.getDescricao() + "\t\t" + tela.getCodigo() + "\t\t\t" + "R$ "
+						+ tela.getValorunitario() + "\t\t" + tela.getQtdeEstoque());
 
 			}
 
 			linha();
 			System.out.println("LISTA ATUAL");
 
-
 			for (Produto p : vendas) {
 
-				
-				System.out.println(p.getCodigo() + "\t" + p.getDescricao() + "\t" + p.getQtdeEstoque() + "\t"
-						+ p.getValorunitario());
+				System.out.println(p.getCodigo() + "\t" + p.getDescricao() + "\t" + "\t"+ p.getValorunitario());
 
 			}
-
 
 			System.out.println("1 - Camisa \n2 - Meia \n3 - Calça \n4 - Casaco \n5 - Tenis \n6 - Pagamento");
 			opcao = leia.next();
 
-			
 			if (opcao.equals("1")) {
 
-				
 				System.out.println("Qnts unidades deseja? ");
 				quntRoupa = leia.nextInt();
 				carrinho.get(0).tirarEstoque(quntRoupa);
@@ -86,14 +79,14 @@ public class CadVendas {
 				totalRoupa = quntRoupa * 21.50;
 				System.out.println("\nTotal Total das Roupas R$" + totalRoupa);
 				System.out.println("============================");
-				// carrinho.add(new Calca("Calça", "CDC 9856", 159.99, 0, " Genner"));
-				vendas.add(new Roupa(carrinho.get(0).getDescricao(), carrinho.get(0).getCodigo(), totalRoupa, quntRoupa,
+
+				vendas.add(new Roupa(carrinho.get(0).getDescricao(), " " + carrinho.get(0).getCodigo(), totalRoupa, quntRoupa,
 						" Genner"));
 
 			} else if (opcao.equals("2")) {
 
-				System.out.println(carrinho.get(1).getDescricao() + carrinho.get(1).getCodigo()
-						+ carrinho.get(1).getValorunitario() + " QNT ESTOQUE: " + carrinho.get(1).getQtdeEstoque());
+				System.out.println(carrinho.get(1).getDescricao() + " " + carrinho.get(1).getCodigo()
+						+ carrinho.get(1).getValorunitario() + " -  QNT ESTOQUE: " + carrinho.get(1).getQtdeEstoque());
 
 				System.out.println("Qnts unidades deseja? ");
 
@@ -103,15 +96,15 @@ public class CadVendas {
 				System.out.println("QNT ESTOQUE ATUAL: " + carrinho.get(1).getQtdeEstoque());
 
 				totalMeia = quntMeia * 50.05;
-				System.out.println("Total Meia R$" + totalMeia);
+				System.out.printf("Total Meia R$ %.2f" , totalMeia);
 
 				vendas.add(new Meia(carrinho.get(1).getDescricao(), carrinho.get(1).getCodigo(), totalMeia, quntMeia,
 						" Genner"));
 
 			} else if (opcao.equals("3")) {
 
-				System.out.println(carrinho.get(2).getDescricao() + carrinho.get(2).getCodigo()
-						+ carrinho.get(2).getValorunitario() + " QNT ESTOQUE: " + carrinho.get(2).getQtdeEstoque());
+				System.out.println(carrinho.get(2).getDescricao() + " "+ carrinho.get(2).getCodigo()
+						+ carrinho.get(2).getValorunitario() + " -  QNT ESTOQUE: " + carrinho.get(2).getQtdeEstoque());
 
 				System.out.println("Qnts unidades deseja? ");
 
@@ -122,12 +115,15 @@ public class CadVendas {
 				System.out.println("QNT ESTOQUE ATUAL: " + carrinho.get(2).getQtdeEstoque());
 
 				totalCalca = quntCalca * 159.99;
-				System.out.println("Total Calça R$" + totalCalca);
+				System.out.printf("Total Calça R$%.2f" , totalCalca);
+
+				vendas.add(new Calca(carrinho.get(2).getDescricao(), " " + carrinho.get(2).getCodigo(), totalCalca, quntCalca,
+						" Genner"));
 
 			} else if (opcao.equals("4")) {
 
-				System.out.println(carrinho.get(3).getDescricao() + carrinho.get(3).getCodigo()
-						+ carrinho.get(3).getValorunitario() + " QNT ESTOQUE: " + carrinho.get(3).getQtdeEstoque());
+				System.out.println(carrinho.get(3).getDescricao() +  " " +carrinho.get(3).getCodigo()
+						+ carrinho.get(3).getValorunitario() + " - QNT ESTOQUE: " + carrinho.get(3).getQtdeEstoque());
 
 				System.out.println("Qnts unidades deseja? ");
 				quntCasaco = leia.nextInt();
@@ -137,12 +133,15 @@ public class CadVendas {
 				System.out.println("QNT ESTOQUE ATUAL: " + carrinho.get(3).getQtdeEstoque());
 
 				totalCasaco = quntCasaco * 120.99;
-				System.out.println("Total Casaco R$" + totalCasaco);
+				System.out.printf("Total Casaco R$%.2f" , totalCasaco);
+
+				vendas.add(new Casaco(carrinho.get(3).getDescricao(), " " + carrinho.get(3).getCodigo(), totalCasaco, quntCasaco,
+						" Genner"));
 
 			} else if (opcao.equals("5")) {
 
-				System.out.println(carrinho.get(4).getDescricao() + carrinho.get(4).getCodigo()
-						+ carrinho.get(4).getValorunitario() + " QNT ESTOQUE: " + carrinho.get(4).getQtdeEstoque());
+				System.out.println(carrinho.get(4).getDescricao() + " " + carrinho.get(4).getCodigo()
+						+ carrinho.get(4).getValorunitario() + " -  QNT ESTOQUE: " + carrinho.get(4).getQtdeEstoque());
 
 				System.out.println("Qnts unidades deseja? ");
 				quntTenis = leia.nextInt();
@@ -152,7 +151,10 @@ public class CadVendas {
 				System.out.println("QNT ESTOQUE ATUAL: " + carrinho.get(4).getQtdeEstoque());
 
 				totalTenis = quntTenis * 200.99;
-				System.out.println("Total Tenis R$" + totalTenis);
+				System.out.printf("Total Tenis R$%.2f" , totalTenis);
+
+				vendas.add(new Tenis(carrinho.get(4).getDescricao(), " " + carrinho.get(4).getCodigo(), totalTenis, quntTenis,
+						" Genner"));
 
 			}
 
@@ -160,7 +162,7 @@ public class CadVendas {
 
 				totalFinal = totalCalca + totalCasaco + totalMeia + totalRoupa + totalTenis;
 				linha();
-				System.out.println("VALOR GASTO R$" + totalFinal);
+				System.out.printf("VALOR GASTO R$%.2f" , totalFinal);
 
 				System.out.println(
 						"Qual a forma de Pagamento? \n1- PG a Vista | 2- No Cartão \n3- Parcelado em 1X | 4- Parcelado em 2X");
@@ -173,15 +175,16 @@ public class CadVendas {
 					desconto = totalFinal * 0.10;
 					imposto = totalFinal * 0.09;
 					totalFinal = totalFinal - desconto;
-					
+
 					linhaNotaFiscal();
 					notaFical.notaFiscal();
-					System.out.println("DESCRIÇÃO\tCODIGO\t\t\tVALOR"); //COLOCAR QUANTIDADE DE PRODUTOS COMPRADOR
+					System.out.println("DESCRIÇÃO\tCODIGO\t\t\tVALOR"); // COLOCAR QUANTIDADE DE PRODUTOS COMPRADOR
 
 					for (Produto p : vendas) {
 
 						System.out.println();
-						System.out.println(p.getDescricao() + "\t\t" + p.getCodigo() + "\t\t\t" + "R$" +p.getValorunitario());
+						System.out.println(
+								p.getDescricao() + "\t\t" + p.getCodigo() + "\t\t\t" + "R$" + p.getValorunitario());
 
 					}
 					System.out.println();
@@ -192,10 +195,10 @@ public class CadVendas {
 
 					vendas.clear();
 
-				} else if (formaPg == '2') {					
-					
+				} else if (formaPg == '2') {
+
 					imposto = totalFinal * 0.09;
-					
+
 					linhaNotaFiscal();
 					notaFical.notaFiscal();
 					System.out.println("DESCRIÇÃO\tCODIGO\t\t\tVALOR");
@@ -203,7 +206,8 @@ public class CadVendas {
 					for (Produto p : vendas) {
 
 						System.out.println();
-						System.out.println(p.getDescricao() + "\t\t" + p.getCodigo() + "\t\t\t" + "R$" +p.getValorunitario());
+						System.out.println(
+								p.getDescricao() + "\t\t" + p.getCodigo() + "\t\t\t" + "R$" + p.getValorunitario());
 
 					}
 					System.out.println();
@@ -216,6 +220,8 @@ public class CadVendas {
 
 				} else if (formaPg == '3') {
 
+					linhaNotaFiscal();
+
 					juros1 = totalFinal * 0.10;
 					imposto = totalFinal * 0.09;
 					totalFinal = totalFinal + juros1;
@@ -223,6 +229,22 @@ public class CadVendas {
 					notaFical.notaFiscal();
 					System.out.printf("Valor em juros R$ %.2f \nValor a ser Pago R$:%.2f ", juros1, totalFinal);
 					System.out.printf("\nValor Imposto %.2f", imposto);
+
+					for (Produto p : vendas) {
+
+						System.out.println();
+						System.out.println(
+								p.getDescricao() + "\t\t" + p.getCodigo() + "\t\t\t" + "R$" + p.getValorunitario());
+
+					}
+					System.out.println();
+					System.out.printf("Valor a ser Pago R$%.2f", totalFinal);
+					System.out.println();
+
+					linhaNotaFiscal();
+
+					vendas.clear();
+
 
 				} else if (formaPg == '4') {
 
@@ -237,6 +259,21 @@ public class CadVendas {
 							totalFinal, valorParcela);
 					System.out.printf("\nValor Imposto %.2f", imposto);
 
+					for (Produto p : vendas) {
+
+						System.out.println();
+						System.out.println(
+								p.getDescricao() + "\t\t" + p.getCodigo() + "\t\t\t" + "R$" + p.getValorunitario());
+
+					}
+					System.out.println();
+					System.out.printf("Valor a ser Pago R$%.2f", totalFinal);
+					System.out.println();
+
+					linhaNotaFiscal();
+
+					vendas.clear();
+
 				}
 
 			}
@@ -250,9 +287,11 @@ public class CadVendas {
 		System.out.println("\n=====================================================================\n");
 
 	}
+
 	public static void linhaNotaFiscal() {
 
 		System.out.println("\n**********************************************************************\n");
+
 
 	}
 
