@@ -53,6 +53,6 @@ select tb_classe.login, tb_classe.servidor,tb_classe.comunidade
 select nome, classe, poder, ataque, defesa, tb_classe.id as forma_de_login ,tb_classe.servidor as servidor_escolhido, tb_classe.comunidade as clas_do_jogador
  from tb_personagem inner join tb_classe on  tb_classe.id = tb_personagem.classe_id;
 
- select * from tb_personagem where tb_personagem.classe like "Mago"; 
+ select * from tb_personagem where tb_personagem.classe like "Mago"; postagem
  
  
